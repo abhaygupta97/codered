@@ -1,4 +1,5 @@
 <?php
+
 namespace Controller;
 
 use View\Loader;
