@@ -1,4 +1,4 @@
-# CodeRed | A Simple Platform for Holding Competitive Programming Contests
+# CodeRed | A Platform for Holding Coding Contests
 
 This application is based on the MVC Framework and the backend is on PHP.
 The application uses [ToroPHP](https://github.com/anandkunal/ToroPHP) for routing and [Twig](https://github.com/twigphp/Twig) for templates.
@@ -8,3 +8,8 @@ The application uses [ToroPHP](https://github.com/anandkunal/ToroPHP) for routin
 - Copy over `config/config.example.php` to `config/config.php` and edit the values.
 - Import schema `schema/codered.sql`.
 - Install composer (`curl -sS https://getcomposer.org/installer | php`) and run `composer install` to install all the dependencies.
+
+### TO-DOs :
+- Login and session storage.
+- Hold multiple contests at once.
+- Timer and Announcement.
