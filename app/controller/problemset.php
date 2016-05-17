@@ -7,6 +7,9 @@ use View\Loader;
 class ProblemSet {
 	function get()
 	{
-		Loader::render('template/problemset.twig', array());
+		$problemset = \Model\ProblemSet::get_all();
+		Loader::render('template/problemset.twig', array(
+			"problems" => $problemset
+			));
 	}
 }

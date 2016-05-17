@@ -5,6 +5,10 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
+<a href="../">Dashboard!</a>
 	<p>Problem Set!</p>
+{% for problem in problems %}
+<a href="problems/{{problem.code}}">{{problem.name}}</a>
+{% endfor %}
 </body>
 </html>
