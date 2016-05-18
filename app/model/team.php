@@ -4,7 +4,7 @@ namespace Model;
 
 class Team {
 	public $name;
-	public $key;
+	public $pass;
 	public $score;
 	public $penalty;
 	public $points;
@@ -18,14 +18,14 @@ class Team {
 		return $result;
 	}
 
-	public function __construct($key)
+	public function __construct($pass)
 	{
-		if($key)
+		if($pass)
 		{
-			$this->key = $key;
-			$query = MySQL::get_instance()->prepare('select * from teams where key=:key');
+			$this->pass = $pass;
+			$query = MySQL::get_instance()->prepare('select * from teams where pass=:pass');
 			$query->execute(array(
-				"key" => $this->key,
+				"pass" => $this->pass,
 				));
 			$result = $query->fetchALL(\PDO::FETCH_ASSOC);
 			if(sizeof($result) == 1)
@@ -45,4 +45,22 @@ class Team {
 		}
 	}
 
+	function addSubmission($code, $score)
+	{
+		$query = MySQL::get_instance()->prepare('select * from teams where pass=:pass');
+		$query->execute(array(
+			"pass" => $this->pass,
+		));
+		$result = $query->fetchALL(\PDO::FETCH_ASSOC);
+		$init_score = $result[0][$code];
+		if($score > $init_score)
+		{
+			$query = MySQL::get_instance()->prepare('update teams set score=score+:val, ' . $code . '=:score where pass=:pass');
+			$query->execute(array(
+				"val" => ($score-$init_score),
+				"score" => $score,
+				"pass" => $this->pass,
+			));
+		}
+	}
 }

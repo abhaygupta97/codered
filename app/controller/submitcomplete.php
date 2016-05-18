@@ -12,8 +12,10 @@ class SubmitComplete {
 	function post($problemCode)
 	{
 		$problem = new \Model\Problem($problemCode);
+		$team = new \Model\Team($_POST['pass']);
 		if(isset($_POST['output']))
 		{
+
 			$out1 = $_POST['output'];
 		    $out2 = $problem->output;
 		    
@@ -35,9 +37,12 @@ class SubmitComplete {
 
 		    $problem->addSubmission($final_score);
 
+		    $team->addSubmission($problemCode, $final_score);
+
 		    Loader::render('template/submitcomplete.twig', array(
 		    	"problem" => $problem->array,
-		    	"score" => $final_score
+		    	"score" => $final_score,
+		    	"team" => $team->name
 		    	));
 		}
 	}
