@@ -15,4 +15,8 @@ Toro::serve(array(
 	"/submit/:alpha" => "Controller\\Submit",
 	"/submit/:alpha/complete" => "Controller\\SubmitComplete",
 	"/leaderboard" => "Controller\\Leaderboard",
+	"/padmin" => "Controller\\ProblemAdmin",
+	"/tadmin" => "Controller\\TeamAdmin",
+	"/padmin/complete" => "Controller\\ProblemAdminComplete",
+	"/tadmin/complete" => "Controller\\TeamAdminComplete",
 ));

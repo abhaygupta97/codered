@@ -18,7 +18,7 @@ class Team {
 		return $result;
 	}
 
-	public function __construct($pass)
+	public function __construct($pass = NULL)
 	{
 		if($pass)
 		{
@@ -41,8 +41,8 @@ class Team {
 					array_push($this->points, $result[0][$temp[$i]['code']]);
 				}
 			}
-			return $this;
 		}
+		return $this;
 	}
 
 	function addSubmission($code, $score)
@@ -62,5 +62,14 @@ class Team {
 				"pass" => $this->pass,
 			));
 		}
+	}
+
+	function addTeam()
+	{
+		$query = MySQL::get_instance()->prepare('insert into teams (name, pass) values(:name, :pass)');
+		$query->execute(array(
+			"name" => $this->name,
+			"pass" => $this->pass,
+		));
 	}
 }

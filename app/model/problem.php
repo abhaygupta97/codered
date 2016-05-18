@@ -12,7 +12,7 @@ class Problem {
 	public $output;
 	public $array;
 
-	public function __construct($code)
+	public function __construct($code = NULL)
 	{
 		if($code)
 		{
@@ -49,5 +49,17 @@ class Problem {
 				"code" => $this->code,
 			));
 		}
+	}
+
+	public function addProblem()
+	{
+		$query = MySQL::get_instance()->prepare('insert into problems values(:code, :name, :statement, :author, 0, 0, :output');
+		$query->execute(array(
+			"code" => $this->code,
+			"name" => $this->name,
+			"statement" => $this->statement,
+			"author" => $this->author,
+			"output" => $this->output,
+		));
 	}
 }
