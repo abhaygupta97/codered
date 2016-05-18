@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 18, 2016 at 08:25 AM
+-- Generation Time: May 18, 2016 at 09:01 AM
 -- Server version: 5.6.28-0ubuntu0.15.04.1
 -- PHP Version: 5.6.4-4ubuntu6.4
 
@@ -19,6 +19,25 @@ SET time_zone = "+00:00";
 --
 -- Database: `codered`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `announcement`
+--
+
+CREATE TABLE IF NOT EXISTS `announcement` (
+  `id` int(3) NOT NULL,
+  `note` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `announcement`
+--
+
+INSERT INTO `announcement` (`id`, `note`) VALUES
+(1, 'test announcement'),
+(2, 'test announcement 2');
 
 -- --------------------------------------------------------
 
@@ -41,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `problems` (
 --
 
 INSERT INTO `problems` (`code`, `name`, `statement`, `author`, `accepted`, `total`, `output`) VALUES
-('TEST', 'Life Universe and Everything', 'All submissions for this problem are available.\r\n\r\nFor help on this problem, please check out our tutorial Input and Output (I/O)\r\n\r\nYour program is to use the brute-force approach in order to find the Answer to Life, the Universe, and Everything. More precisely... rewrite small numbers from input to output. Stop processing input after reading in the number 42. All numbers at input are integers of one or two digits.\r\nExample\r\n\r\n\r\nInput:\r\n1\r\n2\r\n88\r\n42\r\n99\r\n\r\nOutput:\r\n1\r\n2\r\n88', 'Ketan Gupta', 2, 3, '1');
+('TEST', 'Life Universe and Everything', 'All submissions for this problem are available.\r\n\r\nFor help on this problem, please check out our tutorial Input and Output (I/O)\r\n\r\nYour program is to use the brute-force approach in order to find the Answer to Life, the Universe, and Everything. More precisely... rewrite small numbers from input to output. Stop processing input after reading in the number 42. All numbers at input are integers of one or two digits.\r\nExample\r\n\r\n\r\nInput:\r\n1\r\n2\r\n88\r\n42\r\n99\r\n\r\nOutput:\r\n1\r\n2\r\n88', 'Ketan Gupta', 3, 5, '1');
 
 -- --------------------------------------------------------
 
