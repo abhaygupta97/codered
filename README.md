@@ -6,7 +6,7 @@ The application uses [ToroPHP](https://github.com/anandkunal/ToroPHP) for routin
 ### Set Up : 
 - Clone the repository.
 - Copy over `config/config.example.php` to `config/config.php` and edit the values.
-- Copy over `config/codered.local.conf` to /etc/apache2/sites-available/codered.local.conf`,edit it and enable it(`sudo a2ensite codered.local.conf`), and add entry in hosts file(`/etc/hosts`).
+- Copy over `config/codered.local.conf` to `/etc/apache2/sites-available/codered.local.conf`,edit it and enable it(`sudo a2ensite codered.local.conf`), and add entry in hosts file(`/etc/hosts`).
 - Enable mod_rewrite(`sudo a2enmod rewrite`) and restart apache(`sudo service apache2 restart`).
 - Import schema `schema/codered.sql`.
 - Install composer (`curl -sS https://getcomposer.org/installer | php`) and run `composer install` to install all the dependencies.
