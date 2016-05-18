@@ -8,12 +8,14 @@
 
 <a href="../problems">Problem Set!</a>
 
-	<p>Problem!</p>
+	<p>Submit!</p>
 	<p>{{ problem.code }}</p>
 	<p>{{ problem.name }}</p>
-	<p>{{ problem.statement }}</p>
+	<form action="{{ problem.code }}/complete" method="POST" id="frm">
 
-<a href="../submit/{{ problem.code }}">Submit!</a>
+	<textarea name="output" rows="30" cols="40">Copy Output Here</textarea>
+	<input type="submit"/>
 
+	</form>
 </body>
 </html>
