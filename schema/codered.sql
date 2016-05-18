@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 18, 2016 at 09:01 AM
+-- Generation Time: May 18, 2016 at 11:38 AM
 -- Server version: 5.6.28-0ubuntu0.15.04.1
 -- PHP Version: 5.6.4-4ubuntu6.4
 
@@ -73,13 +73,15 @@ CREATE TABLE IF NOT EXISTS `teams` (
   `key` varchar(10) NOT NULL,
   `score` int(5) NOT NULL,
   `penalty` int(10) NOT NULL,
-  `a` int(5) NOT NULL,
-  `b` int(5) NOT NULL,
-  `c` int(5) NOT NULL,
-  `d` int(5) NOT NULL,
-  `e` int(5) NOT NULL,
-  `f` int(5) NOT NULL
+  `TEST` int(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `teams`
+--
+
+INSERT INTO `teams` (`name`, `key`, `score`, `penalty`, `TEST`) VALUES
+('test', 'testkey', 70, 100, 70);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
