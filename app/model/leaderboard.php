@@ -2,7 +2,7 @@
 namespace Model;
 
 class Leaderboard{
-	public function display_board(){
-		
+	public function get_board(){
+		return Team::get_all();
 	}
 }

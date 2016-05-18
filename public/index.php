@@ -13,5 +13,6 @@ Toro::serve(array(
 	"/problems/:alpha" => "Controller\\Problem",
 	"/announcement" => "Controller\\Announcement",
 	"/submit/:alpha" => "Controller\\Submit",
-	"/submit/:alpha/complete" => "Controller\\SubmitComplete"
+	"/submit/:alpha/complete" => "Controller\\SubmitComplete",
+	"/leaderboard" => "Controller\\Leaderboard",
 ));

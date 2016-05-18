@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+</head>
+<body>
+
+<a href="../">Dashboard!</a>
+
+	<p>Leaderboard!</p>
+	{% for team in teams %}
+
+	<p>{{ team.name }}: {{ team.score }}</p>
+
+	{% endfor %}
+
+</body>
+</html>
