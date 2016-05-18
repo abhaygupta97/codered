@@ -53,7 +53,7 @@ class Problem {
 
 	public function addProblem()
 	{
-		$query = MySQL::get_instance()->prepare('insert into problems values(:code, :name, :statement, :author, 0, 0, :output');
+		$query = MySQL::get_instance()->prepare('insert into problems values(:code, :name, :statement, :author, 0, 0, :output)');
 		$query->execute(array(
 			"code" => $this->code,
 			"name" => $this->name,
@@ -61,5 +61,7 @@ class Problem {
 			"author" => $this->author,
 			"output" => $this->output,
 		));
+		$query = MySQL::get_instance()->prepare('alter table teams add ' . $this->code . ' int(5) not null default \'0\'');
+		$query->execute();
 	}
 }
