@@ -11,7 +11,7 @@
 	<p>Problem!</p>
 	<p>{{ problem.code }}</p>
 	<p>{{ problem.name }}</p>
-	<p>{{ problem.statement }}</p>
+	<p>{{ problem.statement | raw }}</p>
 
 <a href="../submit/{{ problem.code }}">Submit!</a>
 
