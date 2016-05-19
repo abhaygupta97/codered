@@ -12,8 +12,12 @@ class SubmitComplete {
 	function post($problemCode)
 	{
 		$problem = new \Model\Problem($problemCode);
-		$team = new \Model\Team($_POST['pass']);
-		if(isset($_POST['output']))
+		$team = new \Model\Team(htmlspecialchars($_POST['pass']));
+		if($team->pass == NULL)
+		{
+			echo "WRONG KEY!";
+		}
+		else if(isset($_POST['output']))
 		{
 
 			$out1 = $_POST['output'];

@@ -6,14 +6,21 @@
 </head>
 <body>
 
-<a href="../problems">Problem Set!</a>
+<center>
+<h3 class="progred">PROG<b>RED</b></h3>
+	<h1 class="codered">CODE<b style="color:#ff0000;">RED</b></h1>
+	<h2 class="page-heading">{{ problem.name }}</h2>
+		<a href="../problems" class="button">Problem Set</a>
 
-	<p>Problem!</p>
-	<p>{{ problem.code }}</p>
-	<p>{{ problem.name }}</p>
-	<p>{{ problem.statement | raw }}</p>
+	<div class="problem">
+		<p class="ann2">Code: {{ problem.code }}</p>
+		<p class="ann2">Total Accepted Users: {{ problem.accepted }}</p>
+		<p class="ann2">Total Submissions: {{ problem.total }}</p>
+		<a class="ann2" href="../../pdf/{{ problem.code }}.pdf">Click Here For Problem Statement!</a>
+	</div>
 
-<a href="../submit/{{ problem.code }}">Submit!</a>
+	<a href="../submit/{{ problem.code }}" class="button">Submit!</a>
+</center>
 
 </body>
 </html>

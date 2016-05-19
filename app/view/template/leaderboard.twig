@@ -2,18 +2,37 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
 
-<a href="../index.php/">Dashboard!</a>
-
-	<p>Leaderboard!</p>
-	{% for team in teams %}
-
-	<p>{{ team.name }}: {{ team.score }}</p>
-
-	{% endfor %}
+<center>
+<h3 class="progred">PROG<b>RED</b></h3>
+	<h1 class="codered">CODE<b style="color:#ff0000;">RED</b></h1>
+	<h2 class="page-heading">Leaderboard!</h2>
+	<a href="../index.php/" class="button">Dashboard</a>
+	<br/><br/><br/>
+	<div class="tbl-header2">
+		<table cellpadding="0" cellspacing="0" border="0">
+			<thead>
+				<tr>
+					<th>Rank</th>
+					<th>Team Name</th>
+					<th>Total Score</th>
+				</tr>
+			</thead>
+		</table>
+	</div>
+	<table cellpadding="0" cellspacing="0" border="0">
+		{% for team in teams %}
+		<tr>
+			<td>{{ loop.index }}</td>
+			<td>{{ team.name }}</td>
+			<td>{{ team.score }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</center>
 
 </body>
 </html>

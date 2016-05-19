@@ -5,13 +5,21 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-<a href="../index.php/">Dashboard!</a>
-	<p>Announcement page</p>
-{% for announcement in announcements %}
 
-<p>{{ announcement.note }}</p>
+<center>
+<h3 class="progred">PROG<b>RED</b></h3>
+	<h1 class="codered">CODE<b style="color:#ff0000;">RED</b></h1>
+		<h2 class="page-heading">Announcements!</h2>
+	<a href="../index.php/" class="button">Dashboard</a>
+	<br/><br/>
 
-{% endfor %}
+	{% for announcement in announcements %}
+
+	<p class="ann">{{ announcement.note }}</p>
+
+	{% endfor %}
+
+</center>
 
 </body>
 </html>

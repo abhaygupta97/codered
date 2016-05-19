@@ -41,6 +41,14 @@ class Team {
 					array_push($this->points, $result[0][$temp[$i]['code']]);
 				}
 			}
+			else
+			{
+				$this->pass = NULL;
+			}
+		}
+		else
+		{
+			$this->pass = NULL;
 		}
 		return $this;
 	}

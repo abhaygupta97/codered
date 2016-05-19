@@ -5,10 +5,40 @@
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-<a href="../index.php/">Dashboard!</a>
-	<p>Problem Set!</p>
-{% for problem in problems %}
-<a href="problems/{{problem.code}}">{{problem.name}}</a>
-{% endfor %}
+<center>
+<h3 class="progred">PROG<b>RED</b></h3>
+	<h1 class="codered">CODE<b style="color:#ff0000;">RED</b></h1>
+	<h2 class="page-heading">Problem Set!</h2>
+	<a href="../index.php/" class="button">Dashboard!</a>
+	<br/><br/><br/>
+
+<div  class="tbl-header">
+<table cellpadding="0" cellspacing="0" border="0">
+  <thead>
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Accepted</th>
+      <th>Total Submissions</th>
+    </tr>
+  </thead>
+</table>
+</div>
+
+<div  class="tbl-content">
+<table cellpadding="0" cellspacing="0" border="0">
+  	<tbody>
+		{% for problem in problems %}
+		<tr>
+	      <td> {{ problem.code }} </td>
+	      <td><a href="problems/{{problem.code}}" class="pname"> {{ problem.name }} </a></td>
+	      <td> {{ problem.accepted }} </td>
+	      <td> {{ problem.total }} </td>
+	    </tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+</center>
 </body>
 </html>

@@ -19,4 +19,5 @@ Toro::serve(array(
 	"/tadmin" => "Controller\\TeamAdmin",
 	"/padmin/complete" => "Controller\\ProblemAdminComplete",
 	"/tadmin/complete" => "Controller\\TeamAdminComplete",
+	"/enable" => "Controller\\Enable",
 ));

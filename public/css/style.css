@@ -1,3 +1,108 @@
-p{
-	color: red;
+@font-face {
+    font-family: 'Trebuchet';
+    src: url("../fonts/Trebuchet MS.ttf");
+}
+
+@font-face {
+    font-family: 'Brandon-Grotesque';
+    src: url("../fonts/Brandon_light.otf");
+}
+
+body {
+  padding: 1.5em;
+}
+
+.progred {
+  font-size: 1.3em;
+  font-weight: 100;
+  font-family: 'Trebuchet';
+}
+
+.codered {
+  margin-top: -30px;
+  font-size: 3.5em;
+  font-weight: 100;
+  font-family: 'Trebuchet';
+  margin-bottom: -20px;
+}
+
+.ann {
+  font-family:'Trebuchet';
+  font-size: 1.3em;
+}
+
+.ann2 {
+  font-family:'Trebuchet';
+  font-size: 1em;
+}
+
+.problem {
+  text-align: left;
+}
+
+.page-heading {
+	font-size: 2.5em;
+	font-weight: 100;
+	font-family: 'Trebuchet';
+}
+
+.button {
+  background-color: ForestGreen;  
+  border-radius: 5px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+
+.button:hover {
+  background-color: DarkGreen;
+}
+
+.pname:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+.pname {
+	text-decoration: none;
+}
+
+.pname:visited {
+	color:black;
+}
+
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: ForestGreen;
+ }
+ .tbl-header2{
+  background-color: #0080ff;
+ }
+.tbl-content{
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid black;
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-size: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Brandon-Grotesque';
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 150;
+  font-size: 18px;
+  color: #000000;
+  border-bottom: solid 1px black;
+  font-family: 'Trebuchet';
 }

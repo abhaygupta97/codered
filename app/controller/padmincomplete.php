@@ -13,11 +13,11 @@ class ProblemAdminComplete {
 			if(strcmp($CONFIG['admin_pass'], $_POST['key']) == 0)
 			{
 				$problem = new \Model\Problem();
-				$problem->code = $_POST['code'];
-				$problem->output = $_POST['output'];
-				$problem->statement = $_POST['statement'];
-				$problem->author = $_POST['author'];
-				$problem->name = $_POST['name'];
+				$problem->code = htmlspecialchars($_POST['code']);
+				$problem->output = htmlspecialchars($_POST['output']);
+				$problem->statement = htmlspecialchars($_POST['statement']);
+				$problem->author = htmlspecialchars($_POST['author']);
+				$problem->name = htmlspecialchars($_POST['name']);
 				$problem->addProblem();
 				Loader::render('template/padmincomplete.twig', array());
 			}

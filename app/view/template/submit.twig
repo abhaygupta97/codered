@@ -6,11 +6,13 @@
 </head>
 <body>
 
-<a href="../problems">Problem Set!</a>
-
-	<p>Submit!</p>
-	<p>{{ problem.code }}</p>
-	<p>{{ problem.name }}</p>
+<center>
+	<h3 class="progred">PROG<b>RED</b></h3>
+	<h1 class="codered">CODE<b style="color:#ff0000;">RED</b></h1>
+	
+	<h2 class="page-heading">Submit!</h2>
+	<a href="../problems" class="button">Problem Set!</a>
+	<p class="ann">Problem: {{ problem.name }}</p>
 	<form action="{{ problem.code }}/complete" method="POST" id="frm">
 
 	<textarea name="output" rows="25" cols="40">Copy Output Here</textarea> <br/>
@@ -18,5 +20,6 @@
 	<input type="submit"/>
 
 	</form>
+</center>
 </body>
 </html>
