@@ -53,7 +53,7 @@ class Team {
 		return $this;
 	}
 
-	function addSubmission($code, $score)
+	function addSubmission($code, $score, $pen)
 	{
 		$query = MySQL::get_instance()->prepare('select * from teams where pass=:pass');
 		$query->execute(array(
@@ -63,7 +63,7 @@ class Team {
 		$init_score = $result[0][$code];
 		if($score > $init_score)
 		{
-			$query = MySQL::get_instance()->prepare('update teams set score=score+:val, ' . $code . '=:score where pass=:pass');
+			$query = MySQL::get_instance()->prepare('update teams set penalty=penalty+' . $pen . ', score=score+:val, ' . $code . '=:score where pass=:pass');
 			$query->execute(array(
 				"val" => ($score-$init_score),
 				"score" => $score,

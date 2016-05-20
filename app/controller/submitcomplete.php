@@ -41,7 +41,9 @@ class SubmitComplete {
 
 		    $problem->addSubmission($final_score);
 
-		    $team->addSubmission($problemCode, $final_score);
+		    $pen = time();
+
+		    $team->addSubmission($problemCode, $final_score, $pen);
 
 		    Loader::render('template/submitcomplete.twig', array(
 		    	"problem" => $problem->array,
