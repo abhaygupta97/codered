@@ -15,3 +15,20 @@ The application uses [ToroPHP](https://github.com/anandkunal/ToroPHP) for routin
 - Login and session storage.
 - Hold multiple contests at once.
 - Timer and Announcement.
+
+### Website :
+ - Home page :
+
+![Home](/docs/home.png)
+
+ - Problems page :
+
+![Home](/docs/problem_set.png)
+
+ - Announcement page :
+
+![Home](/docs/announcements.png)
+
+ - Leaderboard :
+
+![Home](/docs/leaderboard.png)
